@@ -89,19 +89,24 @@
 			"title": "Companies",
 			"form": {
 				"title": "Add New Company",
+				"editTitle": "Edit Company",
 				"name": "Name",
 				"description": "Description",
-				"submit": "Add Company"
+				"submit": "Add Company",
+				"update": "Update Company",
+				"cancel": "Cancel"
 			},
 			"success": {
 				"title": "Success",
 				"create": "Company created successfully",
+				"update": "Company updated successfully",
 				"delete": "Company deleted successfully"
 			},
 			"error": {
 				"title": "Error",
 				"fetch": "Failed to fetch companies",
 				"create": "Failed to create company",
+				"update": "Failed to update company",
 				"delete": "Failed to delete company"
 			}
 		}

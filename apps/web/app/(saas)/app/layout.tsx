@@ -7,6 +7,7 @@ import { organizationListQueryKey } from "@saas/organizations/lib/api";
 import { purchasesQueryKey } from "@saas/payments/lib/api";
 import { getPurchases } from "@saas/payments/lib/server";
 import { ConfirmationAlertProvider } from "@saas/shared/components/ConfirmationAlertProvider";
+import { NavBar } from "@saas/shared/components/NavBar";
 import { getQueryClient } from "@shared/lib/server";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import type { PropsWithChildren } from "react";
@@ -43,7 +44,12 @@ export default async function Layout({ children }: PropsWithChildren) {
 			<SessionProvider>
 				<ActiveOrganizationProvider>
 					<ConfirmationAlertProvider>
-						{children}
+						<div className="flex min-h-screen flex-col">
+							<NavBar />
+							<main className="flex-1">
+								{children}
+							</main>
+						</div>
 					</ConfirmationAlertProvider>
 				</ActiveOrganizationProvider>
 			</SessionProvider>
