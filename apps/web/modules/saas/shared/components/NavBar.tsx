@@ -12,6 +12,7 @@ import {
 	SettingsIcon,
 	UserCog2Icon,
 	UserCogIcon,
+	Building2Icon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -44,6 +45,14 @@ export function NavBar() {
 				: "/app/chatbot",
 			icon: BotMessageSquareIcon,
 			isActive: pathname.includes("/chatbot"),
+		},
+		{
+			label: t("app.menu.companies"),
+			href: activeOrganization
+				? `/app/${activeOrganization.slug}/companies`
+				: "/app/companies",
+			icon: Building2Icon,
+			isActive: pathname.includes("/companies"),
 		},
 		...(activeOrganization
 			? [

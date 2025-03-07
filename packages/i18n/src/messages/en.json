@@ -1,0 +1,27 @@
+{
+  "app": {
+    "menu": {
+      "companies": "Companies"
+    }
+  },
+  "companies": {
+    "title": "Companies",
+    "form": {
+      "title": "Add New Company",
+      "name": "Name",
+      "description": "Description",
+      "submit": "Add Company"
+    },
+    "success": {
+      "title": "Success",
+      "create": "Company created successfully",
+      "delete": "Company deleted successfully"
+    },
+    "error": {
+      "title": "Error",
+      "fetch": "Failed to fetch companies",
+      "create": "Failed to create company",
+      "delete": "Failed to delete company"
+    }
+  }
+} 

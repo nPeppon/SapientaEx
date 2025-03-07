@@ -76,6 +76,8 @@ export const PurchaseScalarFieldEnumSchema = z.enum(['id','organizationId','user
 
 export const AiChatScalarFieldEnumSchema = z.enum(['id','organizationId','userId','title','messages','createdAt','updatedAt']);
 
+export const CompanyScalarFieldEnumSchema = z.enum(['id','name','description','createdAt','updatedAt']);
+
 export const SortOrderSchema = z.enum(['asc','desc']);
 
 export const QueryModeSchema = z.enum(['default','insensitive']);
@@ -270,3 +272,17 @@ export const AiChatSchema = z.object({
 })
 
 export type AiChat = z.infer<typeof AiChatSchema>
+
+/////////////////////////////////////////
+// COMPANY SCHEMA
+/////////////////////////////////////////
+
+export const CompanySchema = z.object({
+  id: z.string().cuid(),
+  name: z.string(),
+  description: z.string().nullable(),
+  createdAt: z.coerce.date(),
+  updatedAt: z.coerce.date(),
+})
+
+export type Company = z.infer<typeof CompanySchema>
